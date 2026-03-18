@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h2>Local Community CBT Engine</h2>
+    <form action="/submit" method="post">
+        {% for q in questions %}
+            <p>{{ q.text }}<br>
+            <input type="text" name="question_{{ loop.index0 }}" placeholder="{{ q.options }}">
+            </p>
+        {% endfor %}
+        <button type="submit">Submit Test</button>
+    </form>
+</body>
+</html>
